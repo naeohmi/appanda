@@ -15,3 +15,11 @@ $(document).ready(function () {
     offset: 0
   });
 });
+
+//from: https://codepen.io/msg4matt/pen/rgobF
+$(document).ready(function($) {
+  // Init Flipping Text
+		  setInterval(function(){
+			  $('.flip-container').toggleClass('hover');
+		  }, 4000);
+});

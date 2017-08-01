@@ -1,3 +1,9 @@
+/*
+COLORS
+teal snake swiper: rgba(91, 199, 210, 1);
+tic toc toe: rgba(52, 52, 51, 1);
+tap dat dot: rgba(42, 182, 117, 1);
+*/
 html, body, .block {
     height: 100%;
 }
@@ -46,8 +52,8 @@ footer {
 }
 
 .row {
-  padding: 10px;
-  margin: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .connecting img {
@@ -57,4 +63,85 @@ footer {
 }
 .connecting p {
   display: inline-block;
+}
+.snake-swiper-color {
+  background-color: rgba(91, 199, 210, 1);
+}
+.snake-swiper-color-light {
+  background-color: rgba(91, 199, 210, 0.7);
+}
+
+.tic-toc-toe-color {
+  background-color: rgba(52, 52, 51, 1);
+}
+.tic-toc-toe-color-light {
+  background-color: rgba(52, 52, 51, 0.7);
+}
+.tap-dat-dot-color {
+  background-color: rgba(42, 182, 117, 1);
+}
+.tap-dat-dot-color-light {
+  background-color: rgba(42, 182, 117, 0.7);
+}
+
+
+
+em {
+  float: left;
+  display: block;
+  margin-right: 5px;
+  font-style: normal;
+}
+.flip-container {
+  position: relative;
+  display: inline-block;
+  width: 527px;
+  height: 40px;
+}
+.flipper {
+  display: block;
+  position: relative;
+  /*top: 14px;*/
+}
+.flip-container.hover .back {
+  -moz-transform: perspective(800px) rotateX(0);
+  -webkit-transform: perspective(800px) rotateX(0);
+  transform: perspective(800px) rotateX(0);
+}
+.flip-container.hover .front {
+  -webkit-transform: perspective(800px) rotateX(-179.9deg);
+  -moz-transform: perspective(800px) rotateX(-179.9deg);
+  transform: perspective(800px) rotateX(-179.9deg);
+}
+.back, .front {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 527px;
+  height: 40px;
+  white-space: nowrap;
+  -webkit-transition: 1.5s ease-in-out;
+  -moz-transition: 1.5s ease-in-out;
+  -ms-transition: 1.5s ease-in-out;
+  -o-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  /*background-color: red;*/
+}
+.back {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform: perspective(800px) rotateX(180deg);
+  -webkit-transform: perspective(800px) rotateX(180deg);
+  transform: perspective(800px) rotateX(180deg);
+}
+.front {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform: perspective(800px) rotateX(0deg);
+  -webkit-transform: perspective(800px) rotateX(0deg);
+  transform: perspective(800px) rotateX(0deg);
+  /*background-color: green;*/
 }
