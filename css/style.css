@@ -4,6 +4,8 @@ teal snake swiper: rgba(91, 199, 210, 1);
 tic toc toe: rgba(52, 52, 51, 1);
 tap dat dot: rgba(42, 182, 117, 1);
 */
+@import url('https://fonts.googleapis.com/css?family=Modak');
+
 html, body, .block {
     height: 100%;
 }
@@ -23,12 +25,8 @@ html, body, .block {
 
 .home-content {
   display: flex;
+}
 
-}
-#main-logo {
-  width: 20em;
-  align-content: center;
-}
 nav ul li a:hover, nav ul li a.active {
   background-color: rgba(0,0,0,.1);
 }
@@ -70,7 +68,6 @@ footer {
 .snake-swiper-color-light {
   background-color: rgba(91, 199, 210, 0.7);
 }
-
 .tic-toc-toe-color {
   background-color: rgba(52, 52, 51, 1);
 }
@@ -85,63 +82,85 @@ footer {
 }
 
 
-
-em {
-  float: left;
-  display: block;
-  margin-right: 5px;
-  font-style: normal;
+.main-title {
+  font-family: 'Modak', cursive;
+  font-size: 5em;
+  display: inline-block;
 }
+
 .flip-container {
   position: relative;
   display: inline-block;
-  width: 527px;
-  height: 40px;
+   /* width: 527px;  */
+   /* height: 40px;  */
 }
 .flipper {
   display: block;
   position: relative;
-  /*top: 14px;*/
 }
 .flip-container.hover .back {
-  -moz-transform: perspective(800px) rotateX(0);
-  -webkit-transform: perspective(800px) rotateX(0);
   transform: perspective(800px) rotateX(0);
 }
 .flip-container.hover .front {
-  -webkit-transform: perspective(800px) rotateX(-179.9deg);
-  -moz-transform: perspective(800px) rotateX(-179.9deg);
   transform: perspective(800px) rotateX(-179.9deg);
 }
 .back, .front {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 527px;
-  height: 40px;
+   top: 0; 
+   left: 0; 
+   /* width: 527px;  */
+   /* height: 40px;  */
   white-space: nowrap;
-  -webkit-transition: 1.5s ease-in-out;
-  -moz-transition: 1.5s ease-in-out;
-  -ms-transition: 1.5s ease-in-out;
-  -o-transition: 1.5s ease-in-out;
   transition: 1.5s ease-in-out;
-  /*background-color: red;*/
+  font-family: 'Modak', cursive;
 }
 .back {
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-transform: perspective(800px) rotateX(180deg);
-  -webkit-transform: perspective(800px) rotateX(180deg);
   transform: perspective(800px) rotateX(180deg);
+  color: rgba(91, 199, 210, 1);
+  
 }
 .front {
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-transform: perspective(800px) rotateX(0deg);
-  -webkit-transform: perspective(800px) rotateX(0deg);
   transform: perspective(800px) rotateX(0deg);
-  /*background-color: green;*/
+  color: rgba(42, 182, 117, 1);
+}
+
+.modak-font {
+  font-family: 'Modak', cursive;
+} 
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d8d8d8+25,bababa+60,7a7a7a+100 */
+.home-landing-gradient {
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ffffff 0%, #d8d8d8 25%, #bababa 60%, #7a7a7a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #ffffff 0%,#d8d8d8 25%,#bababa 60%,#7a7a7a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #ffffff 0%,#d8d8d8 25%,#bababa 60%,#7a7a7a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7a7a7a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.home-gradient {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d8d8d8+25,bababa+60,7a7a7a+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(45deg, #ffffff 0%, #d8d8d8 25%, #bababa 60%, #7a7a7a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #ffffff 0%,#d8d8d8 25%,#bababa 60%,#7a7a7a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #ffffff 0%,#d8d8d8 25%,#bababa 60%,#7a7a7a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7a7a7a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.grey-color {
+  background-color: #BABABA;
+}
+
+.home-landing-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-landing {
+  flex-direction: column;
+   
+}
+.large-img {
+  width: 90%;
 }
